@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<h1>Welcome page</h1>
+<h1>Список продуктов</h1>
 
 <ul>
     <c:forEach var="product" items="${products}">

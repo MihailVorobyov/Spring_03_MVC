@@ -10,28 +10,19 @@ import java.util.List;
 @Service
 public class ProductsService {
     
-    private ProductsRepository productsRepository;
-
     @Autowired
-    public void productsRepository(ProductsRepository productsRepository) {
-        this.productsRepository = productsRepository;
-    }
-
+    private ProductsRepository productsRepository;
+    
     public Product getProductById(int id) {
         return productsRepository.getProductById(id);
     }
     
-//    public Product[] getProductList() {
-//        List<Product> list = productsRepository.getProductList();
-//        Product[] p = new Product[list.size()];
-//
-//        list.toArray(p);
-//
-//        return p;
-//    }
-    
     public List<Product> getProductList() {
         return productsRepository.getProductList();
+    }
+    
+    public void addProduct(Product newProduct) {
+        productsRepository.addProduct(newProduct);
     }
 
     public ProductsService() {
